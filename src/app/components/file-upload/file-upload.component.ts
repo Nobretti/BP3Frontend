@@ -25,7 +25,6 @@ export class FileUploadComponent {
     
     this.fileHandlerService.readJsonFile(file).subscribe({
       next: (diagramsReduced: ProcessDiagram[]) => {
-        console.log("Original: ", diagramsReduced[0], ", Reduced: ", diagramsReduced[1])
         this.originalDiagram.emit(diagramsReduced[0]);
         this.reducedDiagram.emit(diagramsReduced[1]);
         this.error.emit('');

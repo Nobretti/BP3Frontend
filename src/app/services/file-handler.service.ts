@@ -41,7 +41,6 @@ export class FileHandlerService {
             subject.complete();
           },
           error: (err) => {
-            console.log("Error: ", err);
             const errorMessage = typeof err === 'string'
               ? err
               : (err?.error?.message || err?.message || 'Backend error while reducing diagram');

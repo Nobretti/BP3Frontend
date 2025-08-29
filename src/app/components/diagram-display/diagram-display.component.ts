@@ -13,7 +13,6 @@ export class DiagramDisplayComponent {
   @Input() isReduced: boolean = false;
 
   formatJson(obj: any): string {
-    console.log("Trying to display: ", obj);
     return JSON.stringify(obj, null, 2);
   }
 }
