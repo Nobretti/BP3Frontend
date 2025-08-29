@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    { "id": 1, "name": "Start", "type": "Start" },
+    { "id": 2, "name": "Task A", "type": "HumanTask" },
+    { "id": 3, "name": "End", "type": "End" }
+  ],
+  "edges": []
+}
+

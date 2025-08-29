@@ -1,45 +1,54 @@
-# BP3 Angular Frontend
-Thank you for participating in the BP3 Coding Exercise. This is a small Angular project that captures the essence of
-the type of work that we do here at BP3. The exercise should only take an hour or two to complete.
+## Project Summary
 
-## Exercise Summary
-Here at BP3 we work with BPM process diagrams a great deal. This exercise has to do with removing the non-human steps
-from a process diagram and listing only the human steps along with the start and end nodes.
+This Angular frontend uploads a JSON process diagram, posts it to a backend reducer endpoint, and displays:
+* Original diagram JSON
+* Reduced diagram JSON (human tasks + start/end only)
 
-## Important Information
-There are a couple of directories to note:
-* **Requirements Document** - The detailed requirements for the project are found in the `docs` directory in the file
-  named `BP3 Coding Challenge.pdf`. If there are differences between this `README` and the `BP3 Coding Challenge.pdf`
-  the `BP3 Coding Challenge.pdf` should be considered correct.
-* **Project Data** - The JSON data files to be used are found in the `data` directory.
+** Important: Backend expected to be running at `http://localhost:8080/api/diagramprocess/reduce` (POST) returning the reduced `ProcessDiagram`.
 
-## Prerequisites
-* Ensure you have Node.js version 18 or greater
+## Install
 
-# Angular README 
+```
+npm install
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+## Run (development server)
 
-## Development server
+```
+npm start
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to `http://localhost:4200/` and use the "Choose JSON File" button to upload a `.json` file.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm run build
+```
 
-## Running unit tests
+Artifacts are emitted to `dist/frontend`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run unit tests
 
-## Running end-to-end tests
+```
+npm test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Run end-to-end tests (Cypress)
 
-## Further help
+In one terminal, run the app:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm start
+```
+
+In another terminal, run Cypress:
+
+```
+npm run e2e:open   # interactive
+# or
+npm run e2e        # headless
+```
+
+Notes:
+* Ensure the app is running on `http://localhost:4200`.
