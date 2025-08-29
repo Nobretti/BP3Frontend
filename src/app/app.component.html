@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>BP3 Process Diagram Reducer</h1>
+  
+  <app-file-upload
+    (originalDiagram)="updateOriginalDiagram($event)"
+    (reducedDiagram)="updateReducedDiagram($event)"
+    (error)="onError($event)">
+  </app-file-upload>
+
+  <app-diagram-display 
+    *ngIf="reducedDiagram && reducedDiagram.nodes"
+    [diagram]="reducedDiagram"
+    [title]="'Reduced Diagram (Human Tasks Only)'"
+    [isReduced]="true">
+  </app-diagram-display>
+
+  <app-diagram-display
+    *ngIf="originalDiagram && originalDiagram.nodes && originalDiagram.nodes.length > 0"
+    [diagram]="originalDiagram"
+    [title]="'Original Diagram'">
+  </app-diagram-display>
+
+  <app-error-display 
+    [errorMessage]="errorMessage">
+  </app-error-display>
+</div>

@@ -1,0 +1,27 @@
+.upload-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .upload-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background: #2980b9;
+  }
+  
+  .upload-instructions {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }

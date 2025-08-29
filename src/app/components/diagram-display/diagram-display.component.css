@@ -1,0 +1,38 @@
+.section {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .json-display {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    overflow-x: auto;
+  }
+  
+  .json-display.reduced {
+    background: #e8f5e8;
+    border-color: #27ae60;
+  }
+  
+  pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .empty-diagram {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .empty-diagram p {
+    margin: 0;
+    font-size: 16px;
+  }

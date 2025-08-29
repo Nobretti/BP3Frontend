@@ -1,0 +1,18 @@
+<div class="upload-section">
+    <h2>Upload JSON File</h2>
+    <p class="upload-instructions">
+      Upload a JSON file containing a process diagram with nodes and edges.
+    </p>
+    <input 
+      #fileInput
+      type="file" 
+      accept=".json" 
+      (change)="onFileSelected($event)"
+      style="display: none;">
+    <button 
+      type="button"
+      (click)="triggerFileInput()" 
+      class="upload-btn">
+      Choose JSON File
+    </button>
+  </div>
